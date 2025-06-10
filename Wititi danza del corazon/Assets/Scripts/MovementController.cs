@@ -10,9 +10,13 @@ public class MovementController : MonoBehaviour
 
     public float speed;
 
+    [Header("Gameobject Emo")]
+    [SerializeField] private GameObject Inicio;
+
 
     void Start()
     {
+        ResetPosicion();
         rigidbody = GetComponent<Rigidbody2D>();
         //obtener la referencia al rigiidbody
         animator = GetComponent<Animator>();
@@ -45,10 +49,17 @@ public class MovementController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Colisión con: " + collision.gameObject.name);
+        //Debug.Log("Colisión con: " + collision.gameObject.name);
         if (collision.gameObject.tag == "Bailarin1")
         {
-            print("chocamos con player?");
+            GameManager.instance.VidasPlayer();
+            //gameObject.transform.position = Inicio.transform.position;
+            GameManager.instance.audioAbuchear();
+            //print("chocamos xd");
         }
+    }
+    void ResetPosicion()
+    {
+        gameObject.transform.position = Inicio.transform.position;
     }
 }
