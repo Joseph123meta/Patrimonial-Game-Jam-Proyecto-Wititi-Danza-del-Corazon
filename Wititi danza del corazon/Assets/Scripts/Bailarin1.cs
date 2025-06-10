@@ -8,6 +8,7 @@ public class Bailarin1 : MonoBehaviour
     bool pasoIzquierda, pasoDerecha;
 
     float timer = 0f;
+    public float velocidad;
 
     void Start()
     {
@@ -18,16 +19,16 @@ public class Bailarin1 : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= 1f) // 1 segundo ha pasado
+        if (timer >= 0.5f) // 1 segundo ha pasado
         {
 
             if (pasoIzquierda == false && pasoDerecha == false)
             {
-                rigidbodyDance.velocity = Vector2.right * 5;
+                rigidbodyDance.velocity = Vector2.up;//new Vector2(transform.position.x + velocidad, transform.position.y);
                 pasoIzquierda = true;
                 print("1. true, true");
             }
-            if (pasoIzquierda == true && pasoDerecha == false)
+            else if (pasoIzquierda == true && pasoDerecha == false)
             {
                 rigidbodyDance.velocity = Vector2.zero;
                 pasoDerecha = true;
@@ -35,15 +36,15 @@ public class Bailarin1 : MonoBehaviour
                 print("2. true, false");
 
             }
-            if (pasoIzquierda == false && pasoDerecha == true)
+            else if (pasoIzquierda == false && pasoDerecha == true)
             {
-                rigidbodyDance.velocity = Vector2.left * 5;
+                rigidbodyDance.velocity = Vector2.down;//new Vector2(transform.position.x - velocidad, transform.position.y);//Vector2.left * 5;
                 pasoDerecha = true;
                 pasoIzquierda = true;
                 print("3. false, true");
             }
 
-            if (pasoIzquierda == true && pasoDerecha == true)
+            else if (pasoIzquierda == true && pasoDerecha == true)
             {
                 rigidbodyDance.velocity = Vector2.zero;
                 pasoIzquierda = false;
