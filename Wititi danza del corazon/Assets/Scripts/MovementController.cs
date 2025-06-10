@@ -12,6 +12,8 @@ public class MovementController : MonoBehaviour
 
     [Header("Gameobject Emo")]
     [SerializeField] private GameObject Inicio;
+    int vida = 0;
+    bool recuperado = true;
 
 
     void Start()
@@ -28,7 +30,7 @@ public class MovementController : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        if(horizontal != 0 || vertical != 0)
+        if (horizontal != 0 || vertical != 0)
         {
             Vector2 velocity = new Vector2(horizontal, vertical).normalized * speed;
 
@@ -45,21 +47,39 @@ public class MovementController : MonoBehaviour
             animator.SetBool("Moving", false);
         }
 
-                
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log("Colisión con: " + collision.gameObject.name);
-        if (collision.gameObject.tag == "Bailarin1")
+        if (collision.gameObject.tag == "Bailarin1" && recuperado)
         {
+            recuperado = false;
+            StartCoroutine(TiempoRecuperar());
             GameManager.instance.VidasPlayer();
             //gameObject.transform.position = Inicio.transform.position;
             GameManager.instance.audioAbuchear();
+
+            if (vida < 2)
+            {
+                vida = vida + 1;
+                print("vida player: " + vida);
+            }
+            else
+            {
+                ResetPosicion();
+                vida = 0;
+            }
             //print("chocamos xd");
         }
     }
     void ResetPosicion()
     {
         gameObject.transform.position = Inicio.transform.position;
+    }
+    IEnumerator TiempoRecuperar()
+    {
+        yield return new WaitForSeconds(1.0f);
+        recuperado = true;
     }
 }
