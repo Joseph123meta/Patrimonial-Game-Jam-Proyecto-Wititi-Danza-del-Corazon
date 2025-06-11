@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
+    public static MovementController instance;
+
     new Rigidbody2D rigidbody;
     Animator animator;
 
 
     public float speed;
 
-    [Header("Gameobject Emo")]
+    [Header("hito")]
     [SerializeField] private GameObject Inicio;
+
+
+    public bool jugadorHabilitado = true;
     int vida = 0;
     bool recuperado = true;
 
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -27,27 +36,28 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-
-        if (horizontal != 0 || vertical != 0)
+        if (jugadorHabilitado)
         {
-            Vector2 velocity = new Vector2(horizontal, vertical).normalized * speed;
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            float vertical = Input.GetAxisRaw("Vertical");
 
-            rigidbody.velocity = velocity;
+            if (horizontal != 0 || vertical != 0)
+            {
+                Vector2 velocity = new Vector2(horizontal, vertical).normalized * speed;
 
-            animator.SetFloat("Horizontal", horizontal);
-            animator.SetFloat("Vertical", vertical);
-            animator.SetBool("Moving", true);
+                rigidbody.velocity = velocity;
 
+                animator.SetFloat("Horizontal", horizontal);
+                animator.SetFloat("Vertical", vertical);
+                animator.SetBool("Moving", true);
+
+            }
+            else
+            {
+                rigidbody.velocity = Vector2.zero;
+                animator.SetBool("Moving", false);
+            }
         }
-        else
-        {
-            rigidbody.velocity = Vector2.zero;
-            animator.SetBool("Moving", false);
-        }
-
-
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -58,7 +68,10 @@ public class MovementController : MonoBehaviour
             StartCoroutine(TiempoRecuperar());
             GameManager.instance.VidasPlayer();
             //gameObject.transform.position = Inicio.transform.position;
+            
             GameManager.instance.audioAbuchear();
+
+            StartCoroutine(DañarJugador(collision));
 
             if (vida < 2)
             {
@@ -82,4 +95,35 @@ public class MovementController : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         recuperado = true;
     }
+
+    IEnumerator DañarJugador(Collision2D col)
+    {
+        // Retroceso (knockback)
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        Vector2 direccion = (transform.position - col.transform.position).normalized;
+        float fuerzaRetroceso = -50f;
+        rb.velocity = Vector2.zero; // Detiene movimiento previo
+        rb.AddForce(direccion * fuerzaRetroceso, ForceMode2D.Impulse);
+
+        // Invulnerabilidad visual (parpadeo)
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        int repeticiones = 5;
+        float duracion = 0.1f;
+
+        for (int i = 0; i < repeticiones; i++)
+        {
+            sr.enabled = false;
+            yield return new WaitForSeconds(duracion);
+            sr.enabled = true;
+            yield return new WaitForSeconds(duracion);
+        }
+
+        // Aquí podrías poner una variable para desactivar invulnerabilidad si usas lógica de daño
+    }
+    public void AnimIdle()
+    {
+        animator.SetBool("Moving", false);
+        rigidbody.velocity = Vector2.zero;
+    }
+
 }
