@@ -11,7 +11,8 @@ public class Bailarin1 : MonoBehaviour
 
     [Header("Velocidad")]
     [SerializeField] private float velocidad;
-
+    [SerializeField] private string TipoBailarin;
+ 
     [Header("Gameobject Emo")]
     [SerializeField] private GameObject emosiones1;
     [SerializeField] private GameObject emosiones2;
@@ -27,35 +28,69 @@ public class Bailarin1 : MonoBehaviour
 
         if (timer >= 0.5f) // 1 segundo ha pasado
         {
+            if (TipoBailarin == "A")
+            {
+                if (pasoIzquierda == false && pasoDerecha == false)
+                {
+                    rigidbodyDance.velocity = Vector2.right;//new Vector2(transform.position.x + velocidad, transform.position.y);
+                    pasoIzquierda = true;
+                    //print("1. true, true");
+                }
+                else if (pasoIzquierda == true && pasoDerecha == false)
+                {
+                    rigidbodyDance.velocity = Vector2.zero;
+                    pasoDerecha = true;
+                    pasoIzquierda = false;
+                    //print("2. true, false");
 
-            if (pasoIzquierda == false && pasoDerecha == false)
-            {
-                rigidbodyDance.velocity = Vector2.right;//new Vector2(transform.position.x + velocidad, transform.position.y);
-                pasoIzquierda = true;
-                //print("1. true, true");
-            }
-            else if (pasoIzquierda == true && pasoDerecha == false)
-            {
-                rigidbodyDance.velocity = Vector2.zero;
-                pasoDerecha = true;
-                pasoIzquierda = false;
-                //print("2. true, false");
+                }
+                else if (pasoIzquierda == false && pasoDerecha == true)
+                {
+                    rigidbodyDance.velocity = Vector2.left;//new Vector2(transform.position.x - velocidad, transform.position.y);//Vector2.left * 5;
+                    pasoDerecha = true;
+                    pasoIzquierda = true;
+                    //print("3. false, true");
+                }
 
+                else if (pasoIzquierda == true && pasoDerecha == true)
+                {
+                    rigidbodyDance.velocity = Vector2.zero;
+                    pasoIzquierda = false;
+                    pasoDerecha = false;
+                    //print("4. true, true");
+                }
             }
-            else if (pasoIzquierda == false && pasoDerecha == true)
+            else if (TipoBailarin == "B")
             {
-                rigidbodyDance.velocity = Vector2.left;//new Vector2(transform.position.x - velocidad, transform.position.y);//Vector2.left * 5;
-                pasoDerecha = true;
-                pasoIzquierda = true;
-                //print("3. false, true");
-            }
+                if (pasoIzquierda == false && pasoDerecha == false)
+                {
+                    rigidbodyDance.velocity = Vector2.up;//new Vector2(transform.position.x + velocidad, transform.position.y);
+                    pasoIzquierda = true;
+                    //print("1. true, true");
+                }
+                else if (pasoIzquierda == true && pasoDerecha == false)
+                {
+                    rigidbodyDance.velocity = Vector2.zero;
+                    pasoDerecha = true;
+                    pasoIzquierda = false;
+                    //print("2. true, false");
 
-            else if (pasoIzquierda == true && pasoDerecha == true)
-            {
-                rigidbodyDance.velocity = Vector2.zero;
-                pasoIzquierda = false;
-                pasoDerecha = false;
-                //print("4. true, true");
+                }
+                else if (pasoIzquierda == false && pasoDerecha == true)
+                {
+                    rigidbodyDance.velocity = Vector2.down;//new Vector2(transform.position.x - velocidad, transform.position.y);//Vector2.left * 5;
+                    pasoDerecha = true;
+                    pasoIzquierda = true;
+                    //print("3. false, true");
+                }
+
+                else if (pasoIzquierda == true && pasoDerecha == true)
+                {
+                    rigidbodyDance.velocity = Vector2.zero;
+                    pasoIzquierda = false;
+                    pasoDerecha = false;
+                    //print("4. true, true");
+                }
             }
 
             //Debug.Log("Ejecutado una vez por segundo");
@@ -70,7 +105,7 @@ public class Bailarin1 : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             emosiones1.SetActive(true);
-            emosiones2.SetActive(true);
+            //emosiones2.SetActive(true);
             StartCoroutine(TiempoSisEmosiones());
             GameManager.instance.audioHit();
         }
@@ -79,7 +114,7 @@ public class Bailarin1 : MonoBehaviour
     {
         yield return new WaitForSeconds(3.5f);
         emosiones1.SetActive(false);
-        emosiones2.SetActive(false);
+        //emosiones2.SetActive(false);
     }
 
 }

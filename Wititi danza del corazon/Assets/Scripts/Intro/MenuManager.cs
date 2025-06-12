@@ -11,7 +11,10 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(nombreEscena);
     }
-
+    public void SalirJuego()
+    {
+        Application.Quit();
+    }
     // Update is called once per frame
     void Update()
     {
