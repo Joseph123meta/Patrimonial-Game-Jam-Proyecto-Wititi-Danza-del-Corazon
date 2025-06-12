@@ -40,7 +40,10 @@ public class GameManager : MonoBehaviour
     }
     public void audioAbuchear()
     {
-        abuchear.Play();
+        if (!abuchear.isPlaying)
+        {
+            abuchear.Play();
+        }
     }
     public void VidasPlayer()
     {
