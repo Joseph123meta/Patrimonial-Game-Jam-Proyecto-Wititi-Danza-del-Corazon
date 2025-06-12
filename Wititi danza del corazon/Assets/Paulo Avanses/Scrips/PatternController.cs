@@ -2,8 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coreografia : MonoBehaviour
+public class PatternController : MonoBehaviour
 {
+    public enum Modo
+    {
+        Ninguno,
+        Coreografia,
+        RotacionYEscalado
+    }
+
+    public Modo modoSeleccionado = Modo.Ninguno;
+
+    [Header("Variables comunes")]
+    public Transform objetoPrincipal; // usado para rotar en coreografía o como centro
+
+    // === COREOGRAFÍA ===
     [System.Serializable]
     public class Bailarin
     {
@@ -13,33 +26,53 @@ public class Coreografia : MonoBehaviour
         [HideInInspector] public Vector3 posicionDestinoActual;
     }
 
+    [Header("Configuración Coreografía")]
     public List<Bailarin> bailarines;
-    public Transform objetoAGirar;
     public float velocidadMovimiento = 3f;
-    public float velocidadRotacion = 90f; // grados por segundo
+    public float velocidadRotacion = 90f;
     public float gradosPorRotacion = 90f;
     private float tolerancia = 0.01f;
 
+    // === ROTACIÓN Y ESCALADO ===
+    [Header("Configuración Rotación y Escalado")]
+    public bool crecimiento = false;
+    public float velocidadDeRotacion = 360f;
+    public float velocidadDeCrecimiento = 1f;
+    public float cantidadDeCrecimiento = 0.5f;
+    private Vector3 escalaInicial;
+
     void Start()
     {
-        StartCoroutine(EjecutarCoreografia());
+        if (modoSeleccionado == Modo.Coreografia)
+        {
+            StartCoroutine(EjecutarCoreografia());
+        }
+        else if (modoSeleccionado == Modo.RotacionYEscalado)
+        {
+            escalaInicial = transform.localScale;
+        }
     }
 
+    void Update()
+    {
+        if (modoSeleccionado == Modo.RotacionYEscalado)
+        {
+            EjecutarRotacionYEscalado();
+        }
+    }
+
+    // ==========================
+    // MODO 1: COREOGRAFÍA
+    // ==========================
     IEnumerator EjecutarCoreografia()
     {
         while (true)
         {
-            // 1. Actualizar posiciones dinámicas
             ActualizarPosiciones();
 
-            // 2. Mover a destinos (todos esperan a los demás)
             yield return StartCoroutine(MoverTodos(b => b.posicionDestinoActual));
-
-            // 3. Mover de vuelta (todos esperan también)
             yield return StartCoroutine(MoverTodos(b => b.posicionInicialActual));
-
-            // 4. Rotar el objeto
-            yield return StartCoroutine(RotarObjeto(objetoAGirar, gradosPorRotacion));
+            yield return StartCoroutine(RotarObjeto(objetoPrincipal, gradosPorRotacion));
         }
     }
 
@@ -47,9 +80,8 @@ public class Coreografia : MonoBehaviour
     {
         foreach (var b in bailarines)
         {
-            // Usamos posiciones locales y convertimos a global
-            b.posicionInicialActual = objetoAGirar.TransformPoint(b.objeto.localPosition);
-            b.posicionDestinoActual = objetoAGirar.TransformPoint(b.destino.localPosition);
+            b.posicionInicialActual = objetoPrincipal.TransformPoint(b.objeto.localPosition);
+            b.posicionDestinoActual = objetoPrincipal.TransformPoint(b.destino.localPosition);
         }
     }
 
@@ -75,7 +107,7 @@ public class Coreografia : MonoBehaviour
                 }
                 else
                 {
-                    obj.position = destino; // fijar posición exacta al llegar
+                    obj.position = destino;
                     haLlegado[i] = true;
                 }
             }
@@ -96,6 +128,24 @@ public class Coreografia : MonoBehaviour
             objeto.Rotate(0f, 0f, paso);
             rotado += paso;
             yield return null;
+        }
+    }
+
+    // ==========================
+    // MODO 2: ROTACIÓN Y ESCALADO
+    // ==========================
+    void EjecutarRotacionYEscalado()
+    {
+        transform.Rotate(0f, 0f, velocidadDeRotacion * Time.deltaTime);
+
+        if (crecimiento)
+        {
+            float scale = 1 + Mathf.PingPong(Time.time * velocidadDeCrecimiento, cantidadDeCrecimiento);
+            transform.localScale = escalaInicial * scale;
+        }
+        else
+        {
+            transform.localScale = escalaInicial;
         }
     }
 }

@@ -56,7 +56,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7128799395916416116, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
       propertyPath: m_Name
-      value: Bailarin1 (2)
+      value: Bailarin Recorrer
       objectReference: {fileID: 0}
     - target: {fileID: 7128799395916416116, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
       propertyPath: m_IsActive
@@ -130,7 +130,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 500
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

@@ -76,20 +76,10 @@ public class EnemyController : MonoBehaviour
     public void StopRotation()
     {
         Debug.Log("ejecucion en proceso");
-        RotateController rotateController = GetComponentInParent<RotateController>();
-        if (rotateController != null)
+        PatternController patternController = GetComponentInParent<PatternController>();
+        if (patternController != null)
         {
-            rotateController.enabled = !rotateController.enabled;
-            Debug.Log("rotacion detenida");
-        }
-    }
-    public void StopCoreografia()
-    {
-        Debug.Log("ejecucion en proceso");
-        Coreografia coreografia = GetComponentInParent<Coreografia>();
-        if (coreografia != null)
-        {
-            coreografia.enabled = !coreografia.enabled;
+            patternController.enabled = !patternController.enabled;
             Debug.Log("rotacion detenida");
         }
     }
