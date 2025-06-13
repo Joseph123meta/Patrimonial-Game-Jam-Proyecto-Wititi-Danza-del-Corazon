@@ -93,7 +93,7 @@ public class DialogueManager : MonoBehaviour
             {
                 print("/////1");
                 jugador.SetActive(true);
-                dialogueText.color = Color.red;
+                dialogueText.color = Color.magenta;
             }
             else if (personajeNumero[index] == 0)
             {
