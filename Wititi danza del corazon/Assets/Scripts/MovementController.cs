@@ -61,6 +61,12 @@ public class MovementController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "Final")
+        {
+            IntroEscena.instance.FinIntro();
+            jugadorHabilitado = false;
+        }
+
         //Debug.Log("Colisión con: " + collision.gameObject.name);
         if (collision.gameObject.tag == "Bailarin1" && recuperado)
         {
@@ -95,6 +101,8 @@ public class MovementController : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         recuperado = true;
     }
+
+  
 
     IEnumerator DañarJugador(Collision2D col)
     {
