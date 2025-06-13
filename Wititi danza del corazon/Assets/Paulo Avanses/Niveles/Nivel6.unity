@@ -132,11 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.94
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6
+      value: -9.6
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_RootOrder
@@ -144,11 +144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7506542
+      value: -5.78
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5256276
+      value: 4.89
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -186,6 +186,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bailarin Recorrer (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: Velocidad
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: TiempoDeEspera
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
 --- !u!1001 &109339112
@@ -197,11 +205,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.19
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.3
+      value: -17.94
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_RootOrder
@@ -209,11 +217,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.1900005
+      value: 10.52
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.803691
+      value: 9.93
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -250,6 +258,14 @@ PrefabInstance:
     - target: {fileID: 1572363396292691896, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_Name
       value: Bailarin Recorrer (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: Velocidad
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: TiempoDeEspera
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
@@ -346,11 +362,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.75
+      value: -0.74
       objectReference: {fileID: 0}
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -10.89
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_RootOrder
@@ -358,11 +374,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.28
+      value: -17.12
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3599997
+      value: 9.92
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -399,6 +415,14 @@ PrefabInstance:
     - target: {fileID: 1572363396292691896, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_Name
       value: Bailarin Recorrer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: Velocidad
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: TiempoDeEspera
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
@@ -478,11 +502,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.5
+      value: -12.52
       objectReference: {fileID: 0}
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.27
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_RootOrder
@@ -490,11 +514,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.9900007
+      value: 6.08
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.9300003
+      value: -6.32
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -531,6 +555,14 @@ PrefabInstance:
     - target: {fileID: 1572363396292691896, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_Name
       value: Bailarin Recorrer (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: Velocidad
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: TiempoDeEspera
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
@@ -993,6 +1025,11 @@ Transform:
   m_Father: {fileID: 1754657743}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &628101171 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+  m_PrefabInstance: {fileID: 1483925102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &663763200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,6 +1356,7 @@ Transform:
   - {fileID: 1774973860}
   - {fileID: 930676806}
   - {fileID: 1129498706}
+  - {fileID: 628101171}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1559,7 +1597,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.66
+      value: -8.53
       objectReference: {fileID: 0}
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1571,11 +1609,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.029999
+      value: -5.95
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.29
+      value: 10.6
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1612,6 +1650,14 @@ PrefabInstance:
     - target: {fileID: 1572363396292691896, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_Name
       value: Bailarin Recorrer (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: Velocidad
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: TiempoDeEspera
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
@@ -1681,11 +1727,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.58
+      value: 7.88
       objectReference: {fileID: 0}
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.04
+      value: -0.71
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_RootOrder
@@ -1693,11 +1739,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.8769627
+      value: -2.47
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.803691
+      value: 10.33
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1735,6 +1781,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bailarin Recorrer (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: Velocidad
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: TiempoDeEspera
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
 --- !u!4 &1214841540 stripped
@@ -1754,17 +1808,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 801861052}
     m_Modifications:
+    - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.04
+      objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.588419
+      value: -23.92
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36343157
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1801,6 +1859,14 @@ PrefabInstance:
     - target: {fileID: 1572363396292691896, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_Name
       value: Bailarin Recorrer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: Velocidad
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: TiempoDeEspera
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
@@ -1886,11 +1952,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.73
+      value: 8.49
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_RootOrder
@@ -1898,11 +1964,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.6099987
+      value: -11.17
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7599999
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1939,6 +2005,14 @@ PrefabInstance:
     - target: {fileID: 1572363396292691896, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_Name
       value: Bailarin Recorrer (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: Velocidad
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: TiempoDeEspera
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
@@ -2136,6 +2210,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
   m_PrefabInstance: {fileID: 1148231318}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1483925102
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 801861052}
+    m_Modifications:
+    - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572363396292691896, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: m_Name
+      value: Bailarin Recorrer (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: Velocidad
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: TiempoDeEspera
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
 --- !u!1 &1524056881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,11 +2753,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.46
+      value: 12.58
       objectReference: {fileID: 0}
     - target: {fileID: 612256635, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.41
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_RootOrder
@@ -2618,11 +2765,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.496111
+      value: -23.72
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6316055
+      value: -6.3
       objectReference: {fileID: 0}
     - target: {fileID: 609693879169732651, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2659,6 +2806,14 @@ PrefabInstance:
     - target: {fileID: 1572363396292691896, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
       propertyPath: m_Name
       value: Bailarin Recorrer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: Velocidad
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866240623800711590, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
+      propertyPath: TiempoDeEspera
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8ff03a9d12b0a4b95d47037bd97f8c, type: 3}
@@ -3292,7 +3447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7998219468501035539, guid: 44b99b4be082f3e429a95e1163a3b421, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.1
+      value: -47.6
       objectReference: {fileID: 0}
     - target: {fileID: 7998219468501035539, guid: 44b99b4be082f3e429a95e1163a3b421, type: 3}
       propertyPath: m_LocalPosition.y
