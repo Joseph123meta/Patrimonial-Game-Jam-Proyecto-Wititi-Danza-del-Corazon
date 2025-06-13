@@ -6,7 +6,6 @@ public class EnemyController : MonoBehaviour
 {
     private Animator animator;
 
-    // --- Nuevas variables para el comportamiento de movimiento ---
     public enum MovementMode
     {
         Estatico,
@@ -16,34 +15,35 @@ public class EnemyController : MonoBehaviour
     [Header("Comportamiento de Movimiento")]
     [SerializeField] private MovementMode Estado = MovementMode.Estatico;
     [SerializeField] private bool ActualizacionDestino = false;
-    [SerializeField] private GameObject Destino; // El destino al que debe ir
-    [SerializeField] private float Velocidad = 2f; // Velocidad de movimiento al destino
-    [SerializeField] private float TiempoDeEspera = 2f; // Tiempo de espera en el destino
-    [SerializeField] private float DistanciaAceptada = 0.1f; // Distancia para considerar que ha llegado al destino
+    [SerializeField] private GameObject Destino;
+    [SerializeField] private float Velocidad = 2f;
+    [SerializeField] private float TiempoDeEspera = 2f;
+    [SerializeField] private float DistanciaAceptada = 0.1f;
 
     private Vector2 CoordenadasDestino;
-    private Vector2 PosicionInicial; // Corrección: 'PocicionInicial' a 'PosicionInicial'
-    private bool Caminando = false; // Bandera para saber si se dirige al destino
-    private bool DeRegreso = false; // Bandera para saber si está regresando al inicio
-    private Rigidbody2D rb; // Referencia al Rigidbody2D para movimiento
+    private Vector2 PosicionInicial;
+    private bool Caminando = false;
+    private bool DeRegreso = false;
+    private Rigidbody2D rb;
 
     private void Awake()
     {
-        if (Destino != null) // Asegúrate de que el GameObject Destino esté asignado
+        if (Destino != null)
         {
             CoordenadasDestino = Destino.transform.position;
         }
+
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+
         if (!ActualizacionDestino)
         {
-            PosicionInicial = transform.position; // Corrección: 'PocicionInicial' a 'PosicionInicial'
+            PosicionInicial = transform.position;
         }
 
-        // Si el modo es EnMovimiento al inicio, empieza el ciclo
         if (Estado == MovementMode.EnMovimiento)
         {
-            StartCoroutine(WaitAtStartAndGoToDestination()); // Empieza yendo al destino
+            StartCoroutine(WaitAtStartAndGoToDestination());
         }
     }
 
@@ -51,7 +51,7 @@ public class EnemyController : MonoBehaviour
     {
         if (ActualizacionDestino)
         {
-            PosicionInicial = transform.position; // Corrección: 'PocicionInicial' a 'PosicionInicial'
+            PosicionInicial = transform.position;
         }
 
         if (Estado == MovementMode.EnMovimiento)
@@ -62,75 +62,63 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("detecto colision");
         if (collision.gameObject.CompareTag("Player"))
         {
             animator.SetTrigger("Attack");
-            Debug.Log("daño recivido");
-            // Aquí puedes agregar la lógica para que el jugador reciba daño.
-            // GameManager.instance.VidasPlayer();
-            // GameManager.instance.audioHit();
         }
     }
 
     public void StopRotation()
     {
-        Debug.Log("ejecucion en proceso");
         PatternController patternController = GetComponentInParent<PatternController>();
         if (patternController != null)
         {
             patternController.enabled = !patternController.enabled;
-            Debug.Log("rotacion detenida");
+        }
+        Persecucion persecucion = GetComponent<Persecucion>();
+        if (persecucion !=null)
+        {
+            persecucion.enabled = !persecucion.enabled;
         }
     }
 
-    // --- Métodos corregidos para el comportamiento de movimiento ---
     private void HandleGoToDestinationAndReturn()
     {
-        if (Caminando) // CORRECTO: Si está caminando hacia el destino
+        if (Caminando)
         {
-            // Mover hacia el destino
             Vector2 direction = (CoordenadasDestino - (Vector2)transform.position).normalized;
             rb.MovePosition(rb.position + direction * Velocidad * Time.fixedDeltaTime);
 
-            // Verificar si ha llegado al destino
             if (Vector2.Distance(transform.position, CoordenadasDestino) < DistanciaAceptada)
             {
-                Caminando = false; // Ya no está caminando al destino
-                StartCoroutine(WaitAndReturn()); // Esperar y luego regresar
+                Caminando = false;
+                StartCoroutine(WaitAndReturn());
             }
         }
-        else if (DeRegreso) // CORRECTO: Si está regresando a la posición inicial
+        else if (DeRegreso)
         {
-            // Mover de regreso a la posición inicial
             Vector2 direction = (PosicionInicial - (Vector2)transform.position).normalized;
             rb.MovePosition(rb.position + direction * Velocidad * Time.fixedDeltaTime);
 
-            // Verificar si ha llegado al inicio
             if (Vector2.Distance(transform.position, PosicionInicial) < DistanciaAceptada)
             {
-                DeRegreso = false; // Ya no está regresando
-                StartCoroutine(WaitAtStartAndGoToDestination()); // Esperar y luego ir al destino
+                DeRegreso = false;
+                StartCoroutine(WaitAtStartAndGoToDestination());
             }
         }
-        // Si ninguna bandera es true, el enemigo está esperando en un punto.
     }
 
     IEnumerator WaitAndReturn()
     {
-        rb.velocity = Vector2.zero; // Detener el movimiento
-        Debug.Log("Llegó al destino. Esperando...");
+        rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(TiempoDeEspera);
-        Debug.Log("Regresando al inicio.");
-        DeRegreso = true; // Iniciar el regreso al inicio
+        DeRegreso = true;
     }
 
     IEnumerator WaitAtStartAndGoToDestination()
     {
-        rb.velocity = Vector2.zero; // Detener el movimiento
-        Debug.Log("Llegó al inicio. Esperando...");
+        rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(TiempoDeEspera);
-        Debug.Log("Yendo al destino.");
-        Caminando = true; // Iniciar el camino hacia el destino
+        Caminando = true;
     }
 }
