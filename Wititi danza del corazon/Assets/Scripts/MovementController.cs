@@ -64,6 +64,7 @@ public class MovementController : MonoBehaviour
         if(collision.gameObject.tag == "Final")
         {
             IntroEscena.instance.FinIntro();
+            AnimIdle();
             jugadorHabilitado = false;
         }
 

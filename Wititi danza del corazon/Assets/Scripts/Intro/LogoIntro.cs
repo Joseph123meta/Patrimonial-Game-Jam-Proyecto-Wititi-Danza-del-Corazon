@@ -10,6 +10,7 @@ public class LogoIntro : MonoBehaviour
     public float displayTime = 2f;     // Tiempo que se mantiene visible
     public string nombreEscena;
 
+    public bool noEsIntro;
     private void Start()
     {
         StartCoroutine(PlayIntro());
@@ -27,7 +28,10 @@ public class LogoIntro : MonoBehaviour
         yield return StartCoroutine(Fade(1f, 0f, fadeDuration));
 
         // Carga la siguiente escena
-        SceneManager.LoadScene(nombreEscena); // Cambia por el nombre de tu escena principal
+        if (!noEsIntro)
+        {
+            SceneManager.LoadScene(nombreEscena); // Cambia por el nombre de tu escena principal
+        }
     }
 
     IEnumerator Fade(float startAlpha, float endAlpha, float duration)

@@ -5,6 +5,8 @@ public class DialogueTrigger : MonoBehaviour
     public string[] dialogueLines;
     public DialogueManager dialogueManager;
 
+    public string tipo;
+
     //void OnTriggerStay2D(Collider2D other)
     //{
     //    if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
@@ -20,6 +22,11 @@ public class DialogueTrigger : MonoBehaviour
             MovementController.instance.AnimIdle();
             print("aca");
             dialogueManager.StartDialogue(dialogueLines);
+            if (tipo == "mensaje1")
+            {
+                gameObject.SetActive(false);
+            }
+
         }
     }
 }
