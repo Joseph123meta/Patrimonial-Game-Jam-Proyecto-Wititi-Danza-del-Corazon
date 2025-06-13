@@ -27,18 +27,15 @@ public class Persecucion : MonoBehaviour
 
         if (distancia <= rangoDeteccion)
         {
-            // Verificamos si hay un obstáculo al frente
             RaycastHit2D obstaculo = Physics2D.CircleCast(transform.position, radioEnemigo, direccion, distanciaVision, capaObstaculos);
 
             if (obstaculo.collider != null)
             {
-                // Buscar una dirección libre si hay obstáculo
                 Vector2 nuevaDireccion = BuscarRutaLibre(direccion);
                 rb.MovePosition(rb.position + nuevaDireccion.normalized * velocidad * Time.deltaTime);
             }
             else
             {
-                // No hay obstáculos, se mueve hacia el jugador
                 rb.MovePosition(rb.position + direccion * velocidad * Time.deltaTime);
             }
         }
@@ -52,7 +49,6 @@ public class Persecucion : MonoBehaviour
         {
             Vector2 dirRotada = RotarVector(direccionOriginal, angulo);
 
-            // Verificamos si hay espacio suficiente para el enemigo usando un CircleCast
             RaycastHit2D hit = Physics2D.CircleCast(
                 transform.position,
                 radioEnemigo,
@@ -61,7 +57,6 @@ public class Persecucion : MonoBehaviour
                 capaObstaculos
             );
 
-            // Dibuja el raycast en la escena
             Debug.DrawRay(transform.position, dirRotada * distanciaVision, hit.collider == null ? Color.green : Color.red);
 
             if (hit.collider == null)
@@ -70,7 +65,7 @@ public class Persecucion : MonoBehaviour
             }
         }
 
-        return direccionOriginal * 0.2f; // se mueve poco si no hay opciones
+        return direccionOriginal * 0.2f;
     }
 
     Vector2 RotarVector(Vector2 vector, float anguloGrados)
@@ -84,7 +79,6 @@ public class Persecucion : MonoBehaviour
         ).normalized;
     }
 
-    // Dibujar el rango de detección en la escena
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

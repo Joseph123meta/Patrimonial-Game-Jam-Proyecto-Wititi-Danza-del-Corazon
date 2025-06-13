@@ -928,6 +928,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5802862964545918046, guid: 4107bc807254e924e8cadbcd37120113, type: 3}
+      propertyPath: rangoDeteccion
+      value: 48.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802862964545918046, guid: 4107bc807254e924e8cadbcd37120113, type: 3}
       propertyPath: distanciaEvitar
       value: 3.68
       objectReference: {fileID: 0}
@@ -3268,7 +3272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089489802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.74, y: 0, z: 0}
+  m_LocalPosition: {x: -25.3, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []

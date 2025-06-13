@@ -14,9 +14,8 @@ public class PatternController : MonoBehaviour
     public Modo modoSeleccionado = Modo.Ninguno;
 
     [Header("Variables comunes")]
-    public Transform objetoPrincipal; // usado para rotar en coreografía o como centro
+    public Transform objetoPrincipal;
 
-    // === COREOGRAFÍA ===
     [System.Serializable]
     public class Bailarin
     {
@@ -26,15 +25,14 @@ public class PatternController : MonoBehaviour
         [HideInInspector] public Vector3 posicionDestinoActual;
     }
 
-    [Header("Configuración Coreografía")]
+    [Header("ConfiguraciÃ³n CoreografÃ­a")]
     public List<Bailarin> bailarines;
     public float velocidadMovimiento = 3f;
     public float velocidadRotacion = 90f;
     public float gradosPorRotacion = 90f;
     private float tolerancia = 0.01f;
 
-    // === ROTACIÓN Y ESCALADO ===
-    [Header("Configuración Rotación y Escalado")]
+    [Header("ConfiguraciÃ³n RotaciÃ³n y Escalado")]
     public bool crecimiento = false;
     public float velocidadDeRotacion = 360f;
     public float velocidadDeCrecimiento = 1f;
@@ -61,15 +59,11 @@ public class PatternController : MonoBehaviour
         }
     }
 
-    // ==========================
-    // MODO 1: COREOGRAFÍA
-    // ==========================
     IEnumerator EjecutarCoreografia()
     {
         while (true)
         {
             ActualizarPosiciones();
-
             yield return StartCoroutine(MoverTodos(b => b.posicionDestinoActual));
             yield return StartCoroutine(MoverTodos(b => b.posicionInicialActual));
             yield return StartCoroutine(RotarObjeto(objetoPrincipal, gradosPorRotacion));
@@ -131,9 +125,6 @@ public class PatternController : MonoBehaviour
         }
     }
 
-    // ==========================
-    // MODO 2: ROTACIÓN Y ESCALADO
-    // ==========================
     void EjecutarRotacionYEscalado()
     {
         transform.Rotate(0f, 0f, velocidadDeRotacion * Time.deltaTime);

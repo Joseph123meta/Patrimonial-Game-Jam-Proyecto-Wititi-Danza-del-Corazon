@@ -91,22 +91,8 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0
-    functionName: StopCoreografia
-    data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 53cadd0b6c6e3bc428ef502d8d497778, type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 2
     functionName: StopRotation
-    data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 53cadd0b6c6e3bc428ef502d8d497778, type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 2
-    functionName: StopCoreografia
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 53cadd0b6c6e3bc428ef502d8d497778, type: 3}
     floatParameter: 0
