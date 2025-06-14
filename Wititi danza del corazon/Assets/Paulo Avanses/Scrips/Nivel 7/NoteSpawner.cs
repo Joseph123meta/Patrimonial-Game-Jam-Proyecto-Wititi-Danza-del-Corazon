@@ -4,27 +4,32 @@ using UnityEngine;
 public class NoteSpawner : MonoBehaviour
 {
     public SMParser smParser;
-
     public GameObject leftNotePrefab, downNotePrefab, upNotePrefab, rightNotePrefab;
-    public Transform leftSpawn, downSpawn, upSpawn, rightSpawn;
-
+    public Transform leftArrow, downArrow, upArrow, rightArrow;
+    public Transform spawnHeightReference;
     public float scrollSpeed = 5f;
 
     private int noteIndex = 0;
+    private bool spawningEnabled = false;
+    private float startTime;
 
-    void Start()
+    public void BeginSpawning()
     {
         if (smParser == null) { Debug.LogError("❌ SMParser no asignado."); return; }
-
         smParser.Parse();
+        noteIndex = 0;
+        startTime = Time.time;
+        spawningEnabled = true;
     }
 
     void Update()
     {
-        if (smParser == null || smParser.notes == null || smParser.notes.Count == 0)
+        if (!spawningEnabled || smParser == null || smParser.notes == null || smParser.notes.Count == 0)
             return;
 
-        while (noteIndex < smParser.notes.Count && Time.time >= smParser.notes[noteIndex].time)
+        float songTime = Time.time - startTime;
+
+        while (noteIndex < smParser.notes.Count && songTime >= smParser.notes[noteIndex].time)
         {
             SpawnNote(smParser.notes[noteIndex]);
             noteIndex++;
@@ -34,11 +39,11 @@ public class NoteSpawner : MonoBehaviour
     void SpawnNote(NoteData note)
     {
         GameObject prefab = GetPrefab(note.type);
-        Transform spawnPoint = GetSpawnPoint(note.type);
+        Vector3 spawnPos = GetSpawnPosition(note.type);
 
-        if (prefab == null || spawnPoint == null) return;
+        if (prefab == null) return;
 
-        GameObject spawned = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        GameObject spawned = Instantiate(prefab, spawnPos, Quaternion.identity);
         spawned.AddComponent<NoteMover>().scrollSpeed = scrollSpeed;
         spawned.tag = "Note";
         spawned.name = note.type.ToString();
@@ -53,12 +58,18 @@ public class NoteSpawner : MonoBehaviour
         _ => null
     };
 
-    Transform GetSpawnPoint(ArrowType type) => type switch
+    Vector3 GetSpawnPosition(ArrowType type)
     {
-        ArrowType.Left => leftSpawn,
-        ArrowType.Down => downSpawn,
-        ArrowType.Up => upSpawn,
-        ArrowType.Right => rightSpawn,
-        _ => null
-    };
+        Vector3 basePos = type switch
+        {
+            ArrowType.Left => leftArrow.position,
+            ArrowType.Down => downArrow.position,
+            ArrowType.Up => upArrow.position,
+            ArrowType.Right => rightArrow.position,
+            _ => Vector3.zero
+        };
+
+        return new Vector3(basePos.x, spawnHeightReference.position.y, basePos.z);
+    }
 }
+
