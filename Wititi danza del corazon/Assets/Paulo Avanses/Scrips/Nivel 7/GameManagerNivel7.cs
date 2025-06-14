@@ -34,6 +34,7 @@ public class GameManagerNivel7 : MonoBehaviour
             int scoreTotal = winScore - loseScore;
             distanciaPorPunto = distanciaTotal / scoreTotal;
         }
+        noteSpawner.enabled = false;
 
         UpdateScoreText();
     }
@@ -50,6 +51,7 @@ public class GameManagerNivel7 : MonoBehaviour
     {
         gameStarted = true;
         musicSource.Play();
+        noteSpawner.enabled = true;
         noteSpawner.BeginSpawning();
     }
 

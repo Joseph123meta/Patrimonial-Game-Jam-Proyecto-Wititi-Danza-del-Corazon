@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class NoteSpawner : MonoBehaviour
 {
+    public AudioSource musicSource;
     public SMParser smParser;
     public GameObject leftNotePrefab, downNotePrefab, upNotePrefab, rightNotePrefab;
     public Transform leftArrow, downArrow, upArrow, rightArrow;
     public Transform spawnHeightReference;
     public float scrollSpeed = 5f;
+    public float leadTime = 2.5f; // flechas se generan 2.5 segundos antes
+    public float delayBeforeStart = 2f; // espera 2 segundos antes de empezar
 
     private int noteIndex = 0;
     private bool spawningEnabled = false;
@@ -15,10 +18,16 @@ public class NoteSpawner : MonoBehaviour
 
     public void BeginSpawning()
     {
+        if (musicSource != null && musicSource.time >= musicSource.clip.length)
+        {
+            spawningEnabled = false;
+            return;
+        }
+
         if (smParser == null) { Debug.LogError("❌ SMParser no asignado."); return; }
-        smParser.Parse();
+        smParser.Parse(musicSource);
         noteIndex = 0;
-        startTime = Time.time;
+        startTime = Time.time + delayBeforeStart;
         spawningEnabled = true;
     }
 
@@ -29,7 +38,7 @@ public class NoteSpawner : MonoBehaviour
 
         float songTime = Time.time - startTime;
 
-        while (noteIndex < smParser.notes.Count && songTime >= smParser.notes[noteIndex].time)
+        while (noteIndex < smParser.notes.Count && smParser.notes[noteIndex].time <= songTime + leadTime)
         {
             SpawnNote(smParser.notes[noteIndex]);
             noteIndex++;

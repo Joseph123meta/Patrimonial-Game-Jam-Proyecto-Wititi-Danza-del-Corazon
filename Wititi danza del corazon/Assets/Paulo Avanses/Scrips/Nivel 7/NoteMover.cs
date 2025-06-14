@@ -3,21 +3,26 @@ using UnityEngine;
 public class NoteMover : MonoBehaviour
 {
     public float scrollSpeed = 5f;
-    public float despawnY = 10f; // 🔺 Altura en Y donde la nota se considera fallada (ajústalo en el Inspector)
+    public float despawnY = 10f;
+
+    private bool alreadyFailed = false;
 
     void Update()
     {
         transform.Translate(Vector3.up * scrollSpeed * Time.deltaTime);
 
-        if (transform.position.y > despawnY)
+        if (!alreadyFailed && transform.position.y > despawnY)
         {
+            alreadyFailed = true; // 🔒 Marcar que ya se procesó el fallo
+
             GameManagerNivel7 gameManager = FindObjectOfType<GameManagerNivel7>();
             if (gameManager != null)
             {
-                gameManager.AddScore(-10); // ❌ Penalización por fallar
+                //gameManager.AddScore(-10);
             }
 
-            Destroy(gameObject); // 🔥 Destruye la nota fallada
+            Destroy(gameObject); // Solo una vez y solo si no fue ya destruido
         }
     }
 }
+
