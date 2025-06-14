@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f6c7c3d07c77fd347b646b962b41d1c9
+guid: dfd2fb2423ee26c4ab69c6208d599277
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flecha_0
+      name: Flecha 1_0
       rect:
         serializedVersion: 2
         x: 24
-        y: 0
+        y: 51
         width: 80
-        height: 124
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9133d0c8cb2a4bb45b00b99225e7feaa
-      internalID: 760115330
+      spriteID: 53b4a6493354bb8419d689841f3daa60
+      internalID: 1415862910
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Flecha_0: 760115330
+      Flecha 1_0: 1415862910
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

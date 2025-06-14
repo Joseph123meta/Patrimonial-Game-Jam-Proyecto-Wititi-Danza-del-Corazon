@@ -174,10 +174,10 @@ MonoBehaviour:
   downNotePrefab: {fileID: 2729917153614324577, guid: a2d14ad7f133a174ca9359a7537d747e, type: 3}
   upNotePrefab: {fileID: 2729917153614324577, guid: 169d2fe2b790be548833e42aec950c0f, type: 3}
   rightNotePrefab: {fileID: 2729917153614324577, guid: eacd424d7b1e7ff459f9d14a1a474d99, type: 3}
-  leftArrow: {fileID: 177677931}
-  downArrow: {fileID: 250764365}
-  upArrow: {fileID: 254806218}
-  rightArrow: {fileID: 792152989}
+  leftArrow: {fileID: 792152989}
+  downArrow: {fileID: 254806218}
+  upArrow: {fileID: 250764365}
+  rightArrow: {fileID: 177677931}
   spawnHeightReference: {fileID: 1242561779}
   scrollSpeed: 4
   leadTime: 0
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 177677933}
   - component: {fileID: 177677932}
   m_Layer: 5
-  m_Name: izquierda
+  m_Name: Derecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,7 +314,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 651.04364, y: -135.88002}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &177677932
 MonoBehaviour:
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6c7c3d07c77fd347b646b962b41d1c9, type: 3}
+  m_Sprite: {fileID: 1415862910, guid: dfd2fb2423ee26c4ab69c6208d599277, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 250764367}
   - component: {fileID: 250764366}
   m_Layer: 5
-  m_Name: abajo
+  m_Name: arriba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,7 +390,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -390.62628, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250764366
 MonoBehaviour:
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6c7c3d07c77fd347b646b962b41d1c9, type: 3}
+  m_Sprite: {fileID: 1415862910, guid: dfd2fb2423ee26c4ab69c6208d599277, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 254806220}
   - component: {fileID: 254806219}
   m_Layer: 5
-  m_Name: 'arriba '
+  m_Name: abajo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +466,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 390.62616, y: -135.88002}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &254806219
 MonoBehaviour:
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6c7c3d07c77fd347b646b962b41d1c9, type: 3}
+  m_Sprite: {fileID: 1415862910, guid: dfd2fb2423ee26c4ab69c6208d599277, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -668,7 +668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 403.34998, y: 377.55}
+  m_AnchoredPosition: {x: 403.34998, y: 339}
   m_SizeDelta: {x: 1041.67, y: 271.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &453807528
@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 792152991}
   - component: {fileID: 792152990}
   m_Layer: 5
-  m_Name: Derecha
+  m_Name: izquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1015,7 +1015,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 390.62637, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &792152990
 MonoBehaviour:
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6c7c3d07c77fd347b646b962b41d1c9, type: 3}
+  m_Sprite: {fileID: 1415862910, guid: dfd2fb2423ee26c4ab69c6208d599277, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
