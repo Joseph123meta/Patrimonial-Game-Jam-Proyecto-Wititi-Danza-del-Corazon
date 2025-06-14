@@ -3,7 +3,7 @@ using UnityEngine;
 public class NoteMover : MonoBehaviour
 {
     public float scrollSpeed = 5f;
-    public float despawnY = 10f;
+    public float despawnY = 3f;
 
     private bool alreadyFailed = false;
 
@@ -18,7 +18,7 @@ public class NoteMover : MonoBehaviour
             GameManagerNivel7 gameManager = FindObjectOfType<GameManagerNivel7>();
             if (gameManager != null)
             {
-                //gameManager.AddScore(-10);
+                gameManager.AddScore(-10);
             }
 
             Destroy(gameObject); // Solo una vez y solo si no fue ya destruido
