@@ -179,7 +179,7 @@ MonoBehaviour:
   upArrow: {fileID: 254806218}
   rightArrow: {fileID: 792152989}
   spawnHeightReference: {fileID: 1242561779}
-  scrollSpeed: 5
+  scrollSpeed: 4
   leadTime: 0
   delayBeforeStart: 2
 --- !u!82 &26406867
