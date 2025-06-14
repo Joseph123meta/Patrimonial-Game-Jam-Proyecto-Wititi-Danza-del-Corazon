@@ -134,5 +134,12 @@ public class MovementController : MonoBehaviour
         animator.SetBool("Moving", false);
         rigidbody.velocity = Vector2.zero;
     }
-
+    public void CambiarVestido()
+    {
+        animator.SetBool("Vestido", true);
+    }
+    public void QuitarVestido()
+    {
+        animator.SetBool("Vestido", false);
+    }
 }

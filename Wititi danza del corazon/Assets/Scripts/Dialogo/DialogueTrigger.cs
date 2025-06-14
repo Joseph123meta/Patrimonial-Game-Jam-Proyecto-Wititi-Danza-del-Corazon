@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             MovementController.instance.jugadorHabilitado = false;
             MovementController.instance.AnimIdle();
-            print("aca");
+            //print("aca");
             dialogueManager.StartDialogue(dialogueLines);
             if (tipo == "mensaje1")
             {

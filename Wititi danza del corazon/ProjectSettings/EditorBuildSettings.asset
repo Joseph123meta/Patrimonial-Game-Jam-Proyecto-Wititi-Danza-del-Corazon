@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel1.unity
     guid: f48f540615b5bc244a34b2bb00d499e9
   - enabled: 1
-    path: Assets/Paulo Avanses/Niveles/Nivel2.unity
+    path: Assets/Paulo Avanses/Niveles/Nivel2 A.unity
     guid: ca10f905101acef45a464869b19ac904
+  - enabled: 1
+    path: Assets/Paulo Avanses/Niveles/Nivel3.unity
+    guid: d053a2b293eafdc4980c470a2c0eda11
+  - enabled: 1
+    path: Assets/Paulo Avanses/Niveles/Nivel4.unity
+    guid: 9727db604aa50cd4e9dcc8cc10ad7b78
   m_configObjects: {}

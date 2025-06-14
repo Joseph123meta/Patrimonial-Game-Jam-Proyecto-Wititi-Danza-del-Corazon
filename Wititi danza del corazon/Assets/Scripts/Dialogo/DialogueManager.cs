@@ -84,20 +84,20 @@ public class DialogueManager : MonoBehaviour
     }
     void BeginFoto()
     {
-        print("index: " + index);
+        //print("index: " + index);
         dialogoFotoOcultar();//
         if (index < lines.Length)
         {
 
             if (personajeNumero[index] == 1)
             {
-                print("/////1");
+               // print("/////1");
                 jugador.SetActive(true);
                 dialogueText.color = Color.magenta;
             }
             else if (personajeNumero[index] == 0)
             {
-                print("2//////");
+                //print("2//////");
                 npc.SetActive(true);
                 dialogueText.color = Color.white;
             }

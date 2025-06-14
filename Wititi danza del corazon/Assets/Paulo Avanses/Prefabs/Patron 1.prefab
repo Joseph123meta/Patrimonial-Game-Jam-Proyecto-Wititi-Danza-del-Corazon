@@ -56,11 +56,11 @@ MonoBehaviour:
   modoSeleccionado: 2
   objetoPrincipal: {fileID: 0}
   bailarines: []
-  velocidadMovimiento: 3
-  velocidadRotacion: 90
+  velocidadMovimiento: 2
+  velocidadRotacion: 60
   gradosPorRotacion: 90
   crecimiento: 0
-  velocidadDeRotacion: 100
+  velocidadDeRotacion: 50
   velocidadDeCrecimiento: 1
   cantidadDeCrecimiento: 0.5
 --- !u!1001 &4059627391572799340
@@ -70,6 +70,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4059627393066599019}
     m_Modifications:
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.x
+      value: 0.988204
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.y
+      value: 1.843209
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0a6c1f2448f381643a0ae91c506e7ed8, type: 2}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0135884285
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.12232697
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023153919639679239, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096434091595232824, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7128799395916416116, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
       propertyPath: m_Name
       value: Bailarin1 (1)
@@ -132,6 +160,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4059627393066599019}
     m_Modifications:
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.x
+      value: 0.95418644
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8885641
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0a6c1f2448f381643a0ae91c506e7ed8, type: 2}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.003420353
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.008935928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023153919639679239, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096434091595232824, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7128799395916416116, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
       propertyPath: m_Name
       value: Bailarin1 (2)
@@ -194,6 +250,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4059627393066599019}
     m_Modifications:
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9088292
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.y
+      value: 1.9112434
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0a6c1f2448f381643a0ae91c506e7ed8, type: 2}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.019257307
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023153919639679239, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096434091595232824, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7128799395916416116, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
       propertyPath: m_Name
       value: Bailarin1 (4)
@@ -256,6 +336,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4059627393066599019}
     m_Modifications:
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9995413
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8772252
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0a6c1f2448f381643a0ae91c506e7ed8, type: 2}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03059721
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.037284136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023153919639679239, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096434091595232824, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7128799395916416116, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
       propertyPath: m_Name
       value: Bailarin1 (5)
@@ -318,6 +426,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4059627393066599019}
     m_Modifications:
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.x
+      value: 0.98820305
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.y
+      value: 1.979278
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0a6c1f2448f381643a0ae91c506e7ed8, type: 2}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.02492714
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.06563145
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023153919639679239, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096434091595232824, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7128799395916416116, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
       propertyPath: m_Name
       value: Bailarin1 (7)
@@ -380,6 +516,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4059627393066599019}
     m_Modifications:
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9088297
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8999045
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0a6c1f2448f381643a0ae91c506e7ed8, type: 2}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.014759541
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07130098
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023153919639679239, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096434091595232824, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7128799395916416116, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
       propertyPath: m_Name
       value: Bailarin1 (6)
@@ -442,6 +606,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4059627393066599019}
     m_Modifications:
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.x
+      value: 0.93150806
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8432083
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0a6c1f2448f381643a0ae91c506e7ed8, type: 2}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.014759541
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.04295361
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023153919639679239, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096434091595232824, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7128799395916416116, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
       propertyPath: m_Name
       value: Bailarin1
@@ -504,6 +696,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4059627393066599019}
     m_Modifications:
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.x
+      value: 0.93150663
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8205307
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0a6c1f2448f381643a0ae91c506e7ed8, type: 2}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.019257307
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07697058
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023153919639679239, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096434091595232824, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7128799395916416116, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
       propertyPath: m_Name
       value: Bailarin1 (3)
@@ -566,6 +786,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4059627393066599019}
     m_Modifications:
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9201679
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Size.y
+      value: 1.9225824
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 0a6c1f2448f381643a0ae91c506e7ed8, type: 2}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.002248764
+      objectReference: {fileID: 0}
+    - target: {fileID: 48100672751380375, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.02594459
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023153919639679239, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096434091595232824, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7128799395916416116, guid: 4e4529b3fe2d4e0418398a53d1af9499, type: 3}
       propertyPath: m_Name
       value: Bailarin1 (8)
