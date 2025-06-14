@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class NoteMover : MonoBehaviour
 {
-    public float scrollSpeed = 5f;
-    public float despawnY = 3f;
+    public float scrollSpeed = 8f;
+    public float despawnY = 7f;
 
     private bool alreadyFailed = false;
 
