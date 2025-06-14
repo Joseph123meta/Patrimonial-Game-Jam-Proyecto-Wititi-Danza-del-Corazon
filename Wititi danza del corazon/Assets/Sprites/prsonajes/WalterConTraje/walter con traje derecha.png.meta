@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f6d163f946c32de4c943b9830c20a760
+guid: cbd6f87cecc17b34ab84ba2775414622
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,10 +104,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walter con traje izquierda_0
+      name: walter con traje izquierda_0
       rect:
         serializedVersion: 2
-        x: 63
+        x: 48
         y: 27
         width: 144
         height: 222
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61737a3d168f3294eae3cce3570ef3c3
-      internalID: 545857356
+      spriteID: ec39c6dc579332647b5b4895e0a5f7b8
+      internalID: -300468002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walter con traje izquierda_1
+      name: walter con traje izquierda_1
       rect:
         serializedVersion: 2
         x: 310
@@ -139,17 +139,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffef1656c291791499ba2fb24a4a6ce3
-      internalID: -1196798490
+      spriteID: e6f83df2774b8f7469bdcde82355d1d2
+      internalID: 783672717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walter con traje izquierda_2
+      name: walter con traje izquierda_2
       rect:
         serializedVersion: 2
-        x: 573
+        x: 558
         y: 27
         width: 144
         height: 222
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c71fa54b274777d4b93a474577914c52
-      internalID: 304855662
+      spriteID: 5e4059c2f67ae77418b004feaa8fec67
+      internalID: -403290335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walter con traje izquierda_3
+      name: walter con traje izquierda_3
       rect:
         serializedVersion: 2
         x: 820
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cda8bbd308655b43bfe0e37fe3a78c8
-      internalID: 685547191
+      spriteID: 0577a3b5c39f1164eb44907ba5b8983d
+      internalID: -803875648
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walter con traje izquierda_1: -1196798490
-      Walter con traje izquierda_0: 545857356
-      Walter con traje izquierda_3: 685547191
-      Walter con traje izquierda_2: 304855662
+      walter con traje izquierda_0: -300468002
+      walter con traje izquierda_1: 783672717
+      walter con traje izquierda_3: -803875648
+      walter con traje izquierda_2: -403290335
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
