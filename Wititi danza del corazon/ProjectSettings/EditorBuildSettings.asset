@@ -12,12 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/introPrologo.unity
-    guid: eb4df3f9f0fd5c04f9e93956b2b0a8e2
-  - enabled: 1
-    path: Assets/Scenes/Nivel1.unity
-    guid: f48f540615b5bc244a34b2bb00d499e9
-  - enabled: 1
     path: Assets/Paulo Avanses/Niveles/Nivel2 A.unity
     guid: ca10f905101acef45a464869b19ac904
   - enabled: 1
