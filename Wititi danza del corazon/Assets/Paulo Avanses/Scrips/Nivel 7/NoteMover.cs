@@ -15,7 +15,7 @@ public class NoteMover : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.up * scrollSpeed * Time.deltaTime);
+        transform.Translate(Vector3.up * scrollSpeed * Time.deltaTime, Space.World);
 
         if (!alreadyFailed && IsAboveScreen(mainCamera))
         {

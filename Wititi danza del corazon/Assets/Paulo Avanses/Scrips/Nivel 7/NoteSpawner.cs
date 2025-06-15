@@ -52,10 +52,11 @@ public class NoteSpawner : MonoBehaviour
 
         if (prefab == null) return;
 
-        GameObject spawned = Instantiate(prefab, spawnPos, Quaternion.identity);
+        GameObject spawned = Instantiate(prefab, spawnPos, prefab.transform.rotation);
         spawned.AddComponent<NoteMover>().scrollSpeed = scrollSpeed;
         spawned.tag = "Note";
         spawned.name = note.type.ToString();
+
     }
 
     GameObject GetPrefab(ArrowType type) => type switch
@@ -80,5 +81,17 @@ public class NoteSpawner : MonoBehaviour
 
         return new Vector3(basePos.x, spawnHeightReference.position.y, basePos.z);
     }
+    float GetRotationAngle(ArrowType type)
+{
+    return type switch
+    {
+        ArrowType.Up => 0f,          // ya apunta hacia arriba
+        ArrowType.Down => 180f,      // rota hacia abajo
+        ArrowType.Left => 90f,       // rota a la izquierda (imagen gira en sentido antihorario)
+        ArrowType.Right => -90f,     // rota a la derecha
+        _ => 0f
+    };
+}
+
 }
 
