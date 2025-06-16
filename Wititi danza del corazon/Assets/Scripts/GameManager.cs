@@ -16,14 +16,25 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] vidas;
     [SerializeField] private int HitPlayer = 1;
 
-   private void Awake()
+    public bool HayPanelIntro = false;
+    public GameObject PanelIntro;
+
+    public GameObject panelPause;
+    public AudioSource wititisound;
+
+
+    private void Awake()
     {
         instance = this;
     }
 
     void Start()
     {
-        
+        if (HayPanelIntro)
+        {
+            PanelIntro.SetActive(true);
+        }
+        panelPause.SetActive(false);
     }
    
     public void audioHit()
@@ -73,6 +84,31 @@ public class GameManager : MonoBehaviour
         for(int y=0; y <=2; y++)
         {
             vidas[y].SetActive(false);
+        }
+    }
+
+    public void PauseGame()
+    {
+        panelPause.SetActive(true);
+        Time.timeScale = 0;
+        wititisound.Pause();
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        panelPause.SetActive(false);
+        wititisound.Play();
+    }
+    public void SalirJuego()
+    {
+        Application.Quit();
+    }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
         }
     }
 }

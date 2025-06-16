@@ -9,6 +9,8 @@ public class chicaNPC : MonoBehaviour
 
     public Animator chicaAnimator;
     public float TiempoEsperaChica;
+    public GameObject panuelo;
+    public bool hayPanuelo;
 
     float timer = 0f;
 
@@ -25,6 +27,7 @@ public class chicaNPC : MonoBehaviour
             //caminar = true;
             //gameObject.GetComponent<BoxCollider2D>();
             StartCoroutine(TiempoCaminar());
+          
         }
     }
     private void Update()
@@ -35,7 +38,7 @@ public class chicaNPC : MonoBehaviour
 
             if (timer >= 0.05f) // 1 segundo ha pasado
             {
-                rigidbodyDance.velocity = Vector2.right * 3.5f;
+                rigidbodyDance.velocity = Vector2.right * 5f;
                 chicaAnimator.SetBool("CaminarDer", true);
             }
         }
@@ -44,5 +47,9 @@ public class chicaNPC : MonoBehaviour
     {
         yield return new WaitForSeconds(TiempoEsperaChica);
         caminar = true;
+        if (hayPanuelo)
+        {
+            panuelo.SetActive(true);
+        }
     }
 }

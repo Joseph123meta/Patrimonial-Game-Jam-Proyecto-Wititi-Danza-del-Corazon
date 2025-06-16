@@ -16,6 +16,9 @@ public class DialogueManager : MonoBehaviour
     public int[] personajeNumero;
     public float textSpeed = 0.03f;
 
+    [Header("Saber script Lvl6")]
+    [SerializeField] public bool isLvl6 = false;
+
     private int index;
     private bool isTyping = false;
 
@@ -75,11 +78,22 @@ public class DialogueManager : MonoBehaviour
         if (index < lines.Length)
         {
             StartCoroutine(TypeLine());
+            if(index == 11 && MovementController.instance.jugadorVestido)
+            {
+                MovementController.instance.CambiarVestido();
+            }
         }
         else
         {
             dialoguePanel.SetActive(false);
             MovementController.instance.jugadorHabilitado = true;
+
+            if(isLvl6)
+            {
+                lvl6.instance.danzanteCirculo();
+                MovementController.instance.jugadorHabilitado = false;
+                MenuManager.instance.cambiarEscenaTime();
+            }
         }
     }
     void BeginFoto()

@@ -104,7 +104,7 @@ public class Bailarin1 : MonoBehaviour
         //Debug.Log("Colisión con: " + collision.gameObject.name);
         if (collision.gameObject.tag == "Player")
         {
-            emosiones1.SetActive(true);
+            //emosiones1.SetActive(true);/////////////////////////////
             //emosiones2.SetActive(true);
             StartCoroutine(TiempoSisEmosiones());
             GameManager.instance.audioHit();
