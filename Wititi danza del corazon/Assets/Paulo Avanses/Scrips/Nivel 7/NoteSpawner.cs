@@ -3,14 +3,11 @@ using UnityEngine;
 
 public class NoteSpawner : MonoBehaviour
 {
-    public AudioSource musicSource;
     public SMParser smParser;
     public GameObject leftNotePrefab, downNotePrefab, upNotePrefab, rightNotePrefab;
     public Transform leftArrow, downArrow, upArrow, rightArrow;
     public Transform spawnHeightReference;
     public float scrollSpeed = 5f;
-    public float leadTime = 2.5f; // flechas se generan 2.5 segundos antes
-    public float delayBeforeStart = 2f; // espera 2 segundos antes de empezar
 
     private int noteIndex = 0;
     private bool spawningEnabled = false;
@@ -18,16 +15,10 @@ public class NoteSpawner : MonoBehaviour
 
     public void BeginSpawning()
     {
-        if (musicSource != null && musicSource.time >= musicSource.clip.length)
-        {
-            spawningEnabled = false;
-            return;
-        }
-
         if (smParser == null) { Debug.LogError("❌ SMParser no asignado."); return; }
-        smParser.Parse(musicSource);
+        smParser.Parse();
         noteIndex = 0;
-        startTime = Time.time + delayBeforeStart;
+        startTime = Time.time;
         spawningEnabled = true;
     }
 
@@ -38,7 +29,7 @@ public class NoteSpawner : MonoBehaviour
 
         float songTime = Time.time - startTime;
 
-        while (noteIndex < smParser.notes.Count && smParser.notes[noteIndex].time <= songTime + leadTime)
+        while (noteIndex < smParser.notes.Count && songTime >= smParser.notes[noteIndex].time)
         {
             SpawnNote(smParser.notes[noteIndex]);
             noteIndex++;
@@ -52,11 +43,10 @@ public class NoteSpawner : MonoBehaviour
 
         if (prefab == null) return;
 
-        GameObject spawned = Instantiate(prefab, spawnPos, prefab.transform.rotation);
+        GameObject spawned = Instantiate(prefab, spawnPos, Quaternion.identity);
         spawned.AddComponent<NoteMover>().scrollSpeed = scrollSpeed;
         spawned.tag = "Note";
         spawned.name = note.type.ToString();
-
     }
 
     GameObject GetPrefab(ArrowType type) => type switch
@@ -81,17 +71,5 @@ public class NoteSpawner : MonoBehaviour
 
         return new Vector3(basePos.x, spawnHeightReference.position.y, basePos.z);
     }
-    float GetRotationAngle(ArrowType type)
-{
-    return type switch
-    {
-        ArrowType.Up => 0f,          // ya apunta hacia arriba
-        ArrowType.Down => 180f,      // rota hacia abajo
-        ArrowType.Left => 90f,       // rota a la izquierda (imagen gira en sentido antihorario)
-        ArrowType.Right => -90f,     // rota a la derecha
-        _ => 0f
-    };
-}
-
 }
 

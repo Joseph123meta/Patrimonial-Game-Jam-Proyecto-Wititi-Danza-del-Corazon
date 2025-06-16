@@ -15,8 +15,12 @@ public class MovementController : MonoBehaviour
     [Header("hito")]
     [SerializeField] private GameObject Inicio;
 
+    
 
     public bool jugadorHabilitado = true;
+
+    public bool jugadorVestido;
+
     int vida = 0;
     bool recuperado = true;
 
@@ -31,6 +35,13 @@ public class MovementController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         //obtener la referencia al rigiidbody
         animator = GetComponent<Animator>();
+
+        //panelPause.SetActive(false);
+
+        if(jugadorVestido)
+        {
+            CambiarVestido();
+        }
 
     }
 

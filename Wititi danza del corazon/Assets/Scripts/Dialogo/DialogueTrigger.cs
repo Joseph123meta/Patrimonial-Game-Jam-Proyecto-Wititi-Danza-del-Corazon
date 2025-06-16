@@ -26,7 +26,15 @@ public class DialogueTrigger : MonoBehaviour
             {
                 gameObject.SetActive(false);
             }
+            else if(tipo == "cambiarLvl5")
+            {
+                MovementController.instance.jugadorVestido = true;
+                managerLvl5.instance.ActivarHito = true;
+            }
+            else if(tipo == "lvl6")
+            {
 
+            }
         }
     }
 }

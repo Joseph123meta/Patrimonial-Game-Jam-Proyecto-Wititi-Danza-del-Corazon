@@ -23,8 +23,13 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
     // Update is called once per frame
-    void Update()
+    public void cambiarEscenaTime()
     {
-        
+        StartCoroutine(Escena());
+    }
+    IEnumerator Escena()
+    {
+        yield return new WaitForSeconds(6.0f);
+        cambiarEscena();
     }
 }
