@@ -38,8 +38,9 @@ public class chicaNPC : MonoBehaviour
 
             if (timer >= 0.05f) // 1 segundo ha pasado
             {
-                rigidbodyDance.velocity = Vector2.right * 5f;
+                rigidbodyDance.velocity = Vector2.right * 5.5f;
                 chicaAnimator.SetBool("CaminarDer", true);
+                Destroy(gameObject, 5f);
             }
         }
     }

@@ -121,7 +121,7 @@ public class MovementController : MonoBehaviour
         // Retroceso (knockback)
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         Vector2 direccion = (transform.position - col.transform.position).normalized;
-        float fuerzaRetroceso = -50f;
+        float fuerzaRetroceso = -5f;
         rb.velocity = Vector2.zero; // Detiene movimiento previo
         rb.AddForce(direccion * fuerzaRetroceso, ForceMode2D.Impulse);
 

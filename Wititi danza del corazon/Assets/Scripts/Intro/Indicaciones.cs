@@ -14,14 +14,14 @@ public class Indicaciones : MonoBehaviour
     // Update is called once per frame
     void aparecerIndicacion()
     {
-        indicaciones.SetActive(false);
+       
         StartCoroutine(inicioIndicacion());
     }
     IEnumerator inicioIndicacion()
     {
-        yield return new WaitForSeconds(3.5f);
-        indicaciones.SetActive(true);
-        yield return new WaitForSeconds(6.2f);
+        //yield return new WaitForSeconds(1.5f);
+        //in//dicaciones.SetActive(true);
+        yield return new WaitForSeconds(13.2f);
         indicaciones.SetActive(false);
     }
 }

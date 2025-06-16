@@ -6,18 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Intro.unity
+    path: Assets/Scenes 2 jose/Intro.unity
     guid: 3e86f4bd8e70d5d4fa302eb917c1e23a
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes 2 jose/IntroPGJ.unity
+    guid: 0371611200104414188dbe6e4d3277c0
+  - enabled: 1
+    path: Assets/Scenes 2 jose/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Paulo Avanses/Niveles/Nivel2 A.unity
-    guid: ca10f905101acef45a464869b19ac904
+    path: Assets/Scenes 2 jose/1Prologo.unity
+    guid: aaf16edf467cb94468b31c924a87e504
   - enabled: 1
-    path: Assets/Paulo Avanses/Niveles/Nivel3.unity
-    guid: d053a2b293eafdc4980c470a2c0eda11
+    path: Assets/Scenes 2 jose/Level1.unity
+    guid: 60d787f30e6817a43adc88aa7a71418c
   - enabled: 1
-    path: Assets/Paulo Avanses/Niveles/Nivel4.unity
-    guid: 9727db604aa50cd4e9dcc8cc10ad7b78
+    path: Assets/Scenes 2 jose/Level2.unity
+    guid: c132b335e8220414a93959e3605a7b4b
+  - enabled: 1
+    path: Assets/Scenes 2 jose/Level3.unity
+    guid: a3ba8571b86458c40bf77bcd0a491e60
+  - enabled: 1
+    path: Assets/Scenes 2 jose/Level4.unity
+    guid: 0c9d5febb063b0643b1cffe4fd54ef5d
+  - enabled: 1
+    path: Assets/Scenes 2 jose/Level5.unity
+    guid: afebfe475e22026428cb1dac064910b5
+  - enabled: 1
+    path: Assets/Scenes 2 jose/Level6.unity
+    guid: 1ed582ac60ea5a34a9bd2a61e9f2cda8
+  - enabled: 1
+    path: Assets/Paulo Avanses/Niveles/NivelFinal.unity
+    guid: 91e238140a847ef4ca8525dfed0f63f8
   m_configObjects: {}

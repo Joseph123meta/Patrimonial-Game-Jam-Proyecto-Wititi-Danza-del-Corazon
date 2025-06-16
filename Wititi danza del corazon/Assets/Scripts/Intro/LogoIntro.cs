@@ -10,11 +10,18 @@ public class LogoIntro : MonoBehaviour
     public float displayTime = 2f;     // Tiempo que se mantiene visible
     public string nombreEscena;
 
+    
+
     public bool noEsIntro;
     private void Start()
     {
-        StartCoroutine(PlayIntro());
+        StartCoroutine(PlayIntro());    
     }
+    private void Update()
+    {
+        
+    }
+
 
     IEnumerator PlayIntro()
     {
@@ -27,6 +34,8 @@ public class LogoIntro : MonoBehaviour
         // Desaparece (fade out)
         yield return StartCoroutine(Fade(1f, 0f, fadeDuration));
 
+
+        yield return new WaitForSeconds(displayTime);
         // Carga la siguiente escena
         if (!noEsIntro)
         {
