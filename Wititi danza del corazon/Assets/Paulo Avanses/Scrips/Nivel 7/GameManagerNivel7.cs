@@ -77,7 +77,9 @@ public class GameManagerNivel7 : MonoBehaviour
     void UpdateScoreText()
     {
         if (scoreText != null)
-            scoreText.text = $"Puntaje: {score}";
+        {
+            scoreText.text ="Puntaje: " + score.ToString();
+        }
     }
 
     void Win()
