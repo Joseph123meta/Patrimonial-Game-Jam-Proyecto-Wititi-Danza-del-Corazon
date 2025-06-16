@@ -11,7 +11,6 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogo")]
     [SerializeField] private GameObject npc;
     [SerializeField] private GameObject jugador;
-    [SerializeField] private GameObject extra;
 
     public string[] lines;
     public int[] personajeNumero;
@@ -19,8 +18,6 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Saber script Lvl6")]
     [SerializeField] public bool isLvl6 = false;
-    [SerializeField] public bool isLvl8 = false;
-    public GameObject CorazonFinal;
 
     private int index;
     private bool isTyping = false;
@@ -81,25 +78,17 @@ public class DialogueManager : MonoBehaviour
         if (index < lines.Length)
         {
             StartCoroutine(TypeLine());
-            if(index == 13 && MovementController.instance.jugadorVestido)
+            if(index == 11 && MovementController.instance.jugadorVestido)
             {
                 MovementController.instance.CambiarVestido();
-            }
-            if(index == 6 && isLvl8)
-            {
-                CorazonFinal.SetActive(true);
-                Final.instance.FinalEscena();
             }
         }
         else
         {
             dialoguePanel.SetActive(false);
+            MovementController.instance.jugadorHabilitado = true;
 
-            if (!isLvl8)
-            {
-                MovementController.instance.jugadorHabilitado = true;
-            }
-            if (isLvl6)
+            if(isLvl6)
             {
                 lvl6.instance.danzanteCirculo();
                 MovementController.instance.jugadorHabilitado = false;
@@ -118,18 +107,13 @@ public class DialogueManager : MonoBehaviour
             {
                // print("/////1");
                 jugador.SetActive(true);
-                dialogueText.color = Color.yellow;
+                dialogueText.color = Color.magenta;
             }
             else if (personajeNumero[index] == 0)
             {
                 //print("2//////");
                 npc.SetActive(true);
                 dialogueText.color = Color.white;
-            }
-            else if(personajeNumero[index]== 2)
-            {
-                extra.SetActive(true);
-                dialogueText.color = Color.green;
             }
         }
     }
@@ -138,9 +122,6 @@ public class DialogueManager : MonoBehaviour
     {
         jugador.SetActive(false);
         npc.SetActive(false);
-        if(isLvl8)
-        {
-            extra.SetActive(false);
-        }
+
     }
 }

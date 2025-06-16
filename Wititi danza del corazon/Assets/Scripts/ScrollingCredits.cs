@@ -4,7 +4,7 @@ using TMPro;
 public class ScrollingCredits : MonoBehaviour
 {
     public RectTransform creditsText; 
-    public float scrollSpeed = 40f; 
+    public float scrollSpeed = 30f; 
     private float startY;
     private float resetY;
 

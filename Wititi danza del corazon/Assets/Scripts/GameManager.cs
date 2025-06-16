@@ -17,10 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int HitPlayer = 1;
 
     public bool HayPanelIntro = false;
-    public bool EsPrologo = false;
-
     public GameObject PanelIntro;
-    public GameObject PanelIntroPrologo;
 
     public GameObject panelPause;
     public AudioSource wititisound;
@@ -38,10 +35,6 @@ public class GameManager : MonoBehaviour
             PanelIntro.SetActive(true);
         }
         panelPause.SetActive(false);
-        if(EsPrologo)
-        {
-            PanelIntroPrologo.SetActive(true);
-        }
     }
    
     public void audioHit()

@@ -8,8 +8,6 @@ public class lvl6 : MonoBehaviour
 
     public Animator danzante;
 
-    public bool PosicionFinal = false;
-
     private void Awake()
     {
         instance = this;
@@ -17,10 +15,7 @@ public class lvl6 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(PosicionFinal)
-        {
-            danzanteCirculo();
-        }
+        
     }
 
     // Update is called once per frame
