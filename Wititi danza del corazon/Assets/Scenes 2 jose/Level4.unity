@@ -28120,7 +28120,9 @@ MonoBehaviour:
   - {fileID: 1840906310}
   HitPlayer: 1
   HayPanelIntro: 1
+  EsPrologo: 0
   PanelIntro: {fileID: 72629280}
+  PanelIntroPrologo: {fileID: 0}
   panelPause: {fileID: 440570192}
   wititisound: {fileID: 2009549731}
 --- !u!4 &1754657743
@@ -31098,13 +31100,13 @@ Transform:
   - {fileID: 609693878157304775}
   - {fileID: 609693877993460515}
   - {fileID: 609693878444175569}
+  - {fileID: 3052229203879195709}
   - {fileID: 1529802145}
   - {fileID: 1709116657}
   - {fileID: 387074410}
   - {fileID: 2105400568}
   - {fileID: 1436383834}
   - {fileID: 155148292}
-  - {fileID: 3052229203879195709}
   - {fileID: 3499201666606110805}
   - {fileID: 7022032999583572999}
   - {fileID: 409203721}
@@ -33870,6 +33872,7 @@ Transform:
   - {fileID: 1826572549}
   m_Father: {fileID: 2015246499}
   m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3254853586378362822
 GameObject:
@@ -34180,14 +34183,17 @@ MonoBehaviour:
   - "V\xED a una chica lin... digo, mi abuela me pidi\xF3 que va..."
   - "Hey hey dijiste una chica!  \xBFLa de vestido rosa?"
   - "Si, s\xED, la haz visto?... La conoces?... sabes quien es?"
+  - "Si, s\xED, la haz visto?... La conoces?... sabes qui\xE9n es?"
   - "la conozco de vista, siempre anda sola, se dice que sus pap\xE1s son muy estrictos
     con ella. Pero tranquilo, para eso tienes a tu causa y al Wititi."
+    con ella. Pero tranquilo, para eso tienes a tu amigo y al Wititi."
   - "\xBF...?"
   - "En la danza del Wititi los hombres nos ponemos vestidos de mujer para poder
     acercarnos a las damas que no podemos ver as\xED nom\xE1s"
   - enserio! pense que todas eran mujeres.
   - 'jaja no es asi, es un ritual que viene desde nuestros ancestros.   '
   - "Es decir, si mi pongo un traje\u2026?"
+  - "Es decir, s\xED me pongo un traje\u2026?"
   - "As\xED es, toma este vestido."
   - Ahora ve por ella y muestra tu corazon con la danza del wititi
   dialogueManager: {fileID: 1219689835}
